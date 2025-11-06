@@ -1,0 +1,24 @@
+SpOoKy~cAsE (31-10-2025)
+
+def spookify(boo):
+    inp = boo
+    boo = boo.casefold()
+    boo = boo.capitalize()
+    boo = boo.replace("-","~")
+    boo = boo.replace("_","~")
+    x = boo.split("~")
+    boo = boo.replace("~","")
+    j = 0
+    final = ""
+    boo = list(boo)
+    for i in range(2, len(boo)):
+        if i % 2 == 0:
+            boo[i] = boo[i].capitalize()
+    boo = "".join(boo)
+    for i in range(len(x)):
+        y = boo[j: j + len(x[i])]
+        j += len(x[i])
+        final += y
+        if len(final) != len(inp):
+            final += "~"
+    return final
