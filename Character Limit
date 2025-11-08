@@ -1,0 +1,9 @@
+Character Limit (08-11-2025)
+
+def can_post(message):
+    if len(message) <= 40:
+        return f"short post"
+    if len(message) in range(41,81):
+        return f"long post"
+    if len(message) > 80:
+        return f"invalid post"
