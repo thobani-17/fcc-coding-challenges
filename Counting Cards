@@ -1,0 +1,11 @@
+Counting Cards (07-11-2025)
+
+def combinations(cards):
+    """
+    The funniest thing about this challenge is that I solved it without actually understanding the math behind it. The minute I read the description, my math brain immediately went to 'factorial', The counting principle. As I read the rest of the challenge, I realized that the Counting Principle wasn't the solution. I said to myself, "Well you did Math at varsity level, come on, think!". My brain went "Permutations", turns out it was exactly what I was looking for. I then thought, "Why not use permutations, and then divide by the number of cards given?" Well this approach worked for combinations(2) only, in hindsight because 2 = 2!. The approach didn't hold for other values. My next thought was, "Maybe try dividing by the factorial of the given number". Guess what? This approached worked!. I then tried it with a test case that produced a very large number(combination(10)), it also worked. I coded it and submitted. I spent about 3 minute trying to figure out the math behind this. I had an apiphany, "Binomial Theorem". I quickly hit up Google, and found the exact formula I had used. It was buried deep in my memory bank.
+    """
+    import math
+    """This is basically "find the coefficient from Pascal's Triangle". It's commonly called "n choose k" because it is how we choose k elements from a set of n. In this case n = 52 and k is the given integer.
+    """
+
+    return int(math.factorial(52)/(math.factorial(52-cards)*math.factorial(cards)))
