@@ -1,0 +1,23 @@
+Email Signature Generator (12-11-2025)
+
+def generate_signature(name, title, company):
+    first_part = ""
+    second_part = ", "
+    third_part = " at "
+    if "A" <= name[0].upper() <= "I":
+        first_part += ">>"
+        first_part += name
+        signature = first_part + second_part + title + third_part + company
+        return signature
+    
+    if "J" <= name[0].upper() <= "R":
+        first_part += "--"
+        first_part += name
+        signature = first_part + second_part + title + third_part + company
+        return signature
+
+    if "S" <= name[0].upper() <= "Z":
+        first_part += "::"
+        first_part += name
+        signature = first_part + second_part + title + third_part + company
+        return signature
