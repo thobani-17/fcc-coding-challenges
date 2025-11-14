@@ -1,0 +1,9 @@
+Array Shift (13-11-2025)
+
+def shift_array(arr, n):
+    from collections import deque
+    n = n * -1
+    d = deque(arr)
+    d.rotate(n)
+    shifted_arr = list(d)
+    return shifted_arr
