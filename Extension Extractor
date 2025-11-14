@@ -1,0 +1,10 @@
+Extension Extractor (10-11-2025)
+
+def get_extension(filename):
+    if filename[-1] == ".":
+        return f"none"
+    if "." not in filename:
+        return f"none"
+    if ("." in filename) and ("." != filename[-1]):
+        extract = filename.split(".")
+        return extract[-1]
