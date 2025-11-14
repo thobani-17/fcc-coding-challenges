@@ -1,0 +1,16 @@
+Vowels and Consonants (11-11-2025)
+
+def count(s):
+    vowel_count = 0
+    letter_count = 0
+    vowels = ["a", "e", "i", "o", "u"]
+    s = s.casefold()
+    for char in s:
+        if char.isalpha():
+            letter_count += 1
+    for char in s:
+        if char in vowels:
+            vowel_count += 1
+    consonants = letter_count - vowel_count
+    
+    return [vowel_count, consonants]
