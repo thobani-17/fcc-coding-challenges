@@ -4,21 +4,19 @@ def get_weekday(date_string):
     import math
     #Use Zeller's Congruence Method
     year = int(date_string[:4])
+    #m is the month. January and February are treated as months 13 and 14 of the previous year
+    m = int(date_string[5:7])
+    #q is the day of the month
+    q = int(date_string[8:10])
+
+    if m == 1 or m == 2:
+        m += 12
+        year -= 1
+
     #K is the year of the century
     K = year % 100
     #J is the century
     J = math.floor(year / 100)
-
-    month_code_dict = {"01":14, "02":13, "03":3, "04":4, "05":5, "06":6, "07":7, "08":8, "09":9, "10":10, "11":11, "12":12}
-    month_key = date_string[5:7]
-    #m is the month. January and February are treated as months 13 and 14 of the previous year
-    m = month_code_dict[month_key]
-
-    if int(date_string[8]) > 0:
-        #q is the day of the month
-        q = int(date_string[8:])
-    if int(date_string[8]) == 0:
-        q = int(date_string[9])
 
     #h is the day of the week
     a = math.floor((13*(m+1))/5)
@@ -26,8 +24,6 @@ def get_weekday(date_string):
     c = math.floor(J/4)
     d = 2*J
     h = (q + a + K + b + c - d) % 7
-
-    days_of_the_week = {"0":"Saturday", "1":"Sunday", "2":"Monday", "3":"Tuesday", "4":"Wednesday", "5":"Thursday", "6":"Friday"}
-    for key in days_of_the_week.keys():
-        if str(h) == key:
-            return days_of_the_week[key]
+    # h = 0: Saturday, 1: Sunday, ..., 6: Friday
+    days_of_the_week = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    return days_of_the_week[h]
