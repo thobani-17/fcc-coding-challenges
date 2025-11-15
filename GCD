@@ -1,0 +1,5 @@
+GCD (15-11-2025)
+
+def gcd(x, y):
+    import math
+    return math.gcd(x, y)
