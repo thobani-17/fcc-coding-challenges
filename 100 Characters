@@ -1,0 +1,8 @@
+100 Characters (18-11-2025)
+
+def one_hundred(chars):
+    import math
+    multiplier = math.ceil(100/len(chars))
+    chars = chars * multiplier
+
+    return chars[:100]
