@@ -1,0 +1,8 @@
+Rectangle Count (16-11-2025)
+
+def count_rectangles(width, height):
+    compute_width = width * (width + 1) * 0.5
+    compute_height = height * (height + 1) * 0.5
+    number_of_rectangles = compute_width * compute_height
+
+    return int(number_of_rectangles)
