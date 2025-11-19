@@ -1,0 +1,17 @@
+Markdown Heading Converter (19-11-2025)
+
+def convert(heading):
+    heading = heading.strip()
+    space_check = heading.split(" ")
+    if "" in space_check:
+        space_check.remove("")
+    if space_check[0][-1] != "#":       #There must be a space after the last hash(in a string of hashes)
+        return f"Invalid format"
+    if len(space_check[0]) > 6:         #'1 to 6 hashes in a row' check
+        return f"Invalid format"
+    hash_characters = len(space_check[0])
+    del space_check[0]
+    header = space_check = [item.strip() for item in space_check]
+    header = " ".join(header)
+    valid_heading = f"<h{hash_characters}>{header}</h{hash_characters}>"
+    return valid_heading
