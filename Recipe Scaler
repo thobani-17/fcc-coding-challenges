@@ -1,0 +1,22 @@
+Recipe Scaler (22-11-2025)
+
+def scale_recipe(ingredients, scale):
+    scaled = []
+    for item in ingredients:
+        item = item.split(" ")
+
+        if "." in item[0]:
+            item[0] = str(float(item[0]) * scale)
+        else:
+            item[0] = str(int(item[0]) * scale)
+        if "." in item[0]:
+            p_holder = item[0].split(".")
+            if p_holder[-1] == "0": #e.g. 3.0 should be returned as 3
+                item[0] = p_holder[0]
+            else:
+                item[0] = ".".join(p_holder) #e.g. 1.5 should be returned as 1.5
+        
+        item = " ".join(item)
+        scaled.append(item)
+
+    return scaled
