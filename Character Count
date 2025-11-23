@@ -1,0 +1,16 @@
+Character Count (23-11-2025)
+
+def count_characters(sentence):
+    character_count = []
+    from collections import Counter
+    alphabetical = ""
+    for char in sentence:
+        if char.isalpha():
+            alphabetical += char
+    alphabetical = alphabetical.casefold()
+    count = Counter(list(alphabetical))
+    count = dict(count)
+    for key, value in count.items():
+        character_count.append(f"{key} {value}")
+    character_count.sort()
+    return character_count
