@@ -1,0 +1,15 @@
+What's My Age Again? (27-11-2025)
+
+def calculate_age(birthday):
+    year = int(birthday[:4])
+    month = int(birthday[5:7])
+    day = int(birthday[8:10])
+    age = 2025 - year
+    
+    if month == 11 and day < 27:
+        return age
+    if month > 11:
+        age -= 1
+        return age
+    if month < 11:
+        return age
