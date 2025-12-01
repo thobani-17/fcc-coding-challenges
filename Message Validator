@@ -1,0 +1,11 @@
+Message Validator (24-11-2025)
+
+def is_valid_message(message, validation):
+    first_letters = ""
+    message_list = message.split(" ")
+    for word in message_list:
+        first_letters += word[0]
+    if first_letters.casefold() == validation.casefold():
+        return True
+    else:
+        return False
