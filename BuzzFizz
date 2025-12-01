@@ -1,0 +1,18 @@
+BuzzFizz (26-11-2026)
+
+def is_fizz_buzz(sequence):
+    n = len(sequence)
+    fb = list(range(1, n+1))
+    for i in range(n):
+        if fb[i] % 3 == 0 and fb[i] % 5 == 0:
+            fb[i] = "FizzBuzz"
+    for i in range(n):
+        if str(fb[i]).isdigit() and fb[i] % 3 == 0:    #At this stage, it's possible that some of the elements in list 'fb' are strings, so it's best to check if an element is a digit before checking for divibility. e.g. "'FizzBuzz' % 3 == 0" returns TypeError
+            fb[i] = "Fizz"
+    for i in range(n):
+        if str(fb[i]).isdigit() and fb[i] % 5 == 0:
+            fb[i] = "Buzz"
+    if fb == sequence:
+        return True
+    else:
+        return False
