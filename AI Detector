@@ -1,0 +1,15 @@
+AI Detector (30-11-2025)
+
+def detect_ai(text):
+    count = 0
+    for word in text.strip("-.'!()").split(" "):   #Don't include punctuation or other non-letters as part of a word
+        if len(word) >= 7:
+            count += 1
+    if count >= 3:
+        return f"AI"
+    if text.count("-") >= 2:
+        return f"AI"
+    if text.count("(") >= 2:
+        return f"AI"
+    else:
+        return f"Human"
