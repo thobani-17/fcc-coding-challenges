@@ -1,0 +1,22 @@
+Signature Validation (01-11-2025)
+
+def verify(message, key, signature):
+    import string
+    mapping = []
+    sum_message = 0
+    sum_key = 0
+    for num, letter in enumerate("0" + string.ascii_letters):
+        mapping.append((letter, num))
+    mapping_dict = dict(mapping)
+    message = message.replace(" ","").strip("'!.?,")
+    key = key.replace(" ","").strip("'!.?,")
+
+    for char in message:
+        sum_message += mapping_dict[char]
+    for char in key:
+        sum_key += mapping_dict[char]
+    total = sum_message + sum_key
+    if total == signature:
+        return True
+    else:
+        return False
