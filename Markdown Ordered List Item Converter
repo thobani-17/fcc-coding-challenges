@@ -1,0 +1,14 @@
+Markdown Ordered List Item Converter (03-12-2025)
+
+def convert_list_item(markdown):
+    markdown = markdown.strip()
+    markdown = markdown.split(" ")
+    if "" in markdown:
+        markdown.remove("")
+    if markdown[0][0].isdigit() and markdown[0][-1] == ".":
+        markdown.pop(0)
+        list_item = ' '.join([item for item in markdown])
+        list_tag = f"<li>{list_item}</li>"
+        return list_tag
+    else:
+        return f"Invalid format"
