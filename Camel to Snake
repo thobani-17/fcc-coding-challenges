@@ -1,0 +1,13 @@
+Camel to Snake (02-12-2025)
+
+def to_snake(camel):
+    snake = ''
+    j = 0
+    for i in range(len(camel)):
+        if camel[i].isupper():
+            snake += camel[j:i]
+            snake += "_"
+            j = i
+    snake += camel[j:]
+    
+    return snake.casefold()
