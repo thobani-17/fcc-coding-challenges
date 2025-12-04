@@ -1,0 +1,13 @@
+Permutation Count (04-12-2025)
+
+def count_permutations(s):
+    #The Counting Principle (Identical Objects)
+    import math
+    from collections import Counter
+    x = dict(Counter(s))
+    divisor = 1
+    unique = "".join(set(s))
+    for char in unique:
+        divisor *= math.factorial(x[char])
+    count_principle = int(math.factorial(len(s))/divisor)
+    return count_principle
