@@ -1,0 +1,12 @@
+Symmetric Difference (05-12-2025)
+
+def difference(arr1, arr2):
+    from collections import Counter
+    symmetric = []
+    joined = arr1 + arr2
+    count = dict(Counter(joined))
+    unique = list(set(joined))
+    for value in unique:
+        if count[value] == 1:
+            symmetric.append(value)
+    return symmetric
