@@ -1,0 +1,19 @@
+Date Formatter (06-12-2025)
+
+def format_date(date_string):
+    months = ["0", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    
+    date_list = date_string.split(" ")
+    year = date_list[2]
+    month_str = date_list[0]
+    month_int = months.index(month_str)
+    if month_int < 10:
+        month_int = f"0{month_int}"
+    
+    day = date_list[1].replace(",","")
+
+    if int(day) < 10:
+        day = f"0{day}"
+
+    formatted = f"{year}-{month_int}-{day}"
+    return formatted
