@@ -1,0 +1,15 @@
+String Compression (07-12-2025)
+
+def compress_string(sentence):
+    from collections import Counter
+    lst = sentence.split(" ")
+    lst_unique = list(dict.fromkeys(lst))    #sentence without duplicates
+    count = dict(Counter(lst))
+    for value in lst_unique:
+        if count[value] == 1:
+            count.pop(value)         #dict count of words that appear at least twice
+    for value in lst_unique:
+        if value in count:
+            lst_unique[lst_unique.index(value)] = f"{value}({count[value]})"
+    compressed = " ".join(lst_unique)
+    return compressed
