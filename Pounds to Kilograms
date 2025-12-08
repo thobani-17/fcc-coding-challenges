@@ -1,0 +1,10 @@
+Pounds to Kilograms (08-12-2025)
+
+def convert_to_kgs(lbs):
+    kgs = lbs / 2.20462
+    if kgs == 1:
+        return f"{lbs} pounds equals {kgs:.2f} kilogram."
+    if lbs == 1:
+        return f"1 pound equals {kgs:.2f} kilograms."
+    else:
+        return f"{lbs} pounds equals {kgs:.2f} kilograms."
