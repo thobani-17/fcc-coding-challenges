@@ -1,0 +1,8 @@
+Most Frequent (09-12-2025)
+
+def most_frequent(arr):
+    from collections import Counter
+    counter = Counter(arr).most_common(1)
+    mode = counter[0][0]
+
+    return mode
