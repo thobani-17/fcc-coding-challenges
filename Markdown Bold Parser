@@ -1,0 +1,19 @@
+Markdown Bold Parser (10-12-2025)
+
+def parse_bold(markdown):
+    if (markdown[0] == "*") or (markdown[0] == "_"):
+        if markdown[2] == " ":
+            return markdown
+        if markdown[-3] == " ":
+            return markdown
+        else:
+            extracted = markdown.lstrip("*_").rstrip("*_")
+            return f"<b>{extracted}</b>"
+
+    markdown_list = markdown.split(" ")
+    for item in markdown_list:
+        if ("*" in item) or ("_" in item):
+            extracted = item.lstrip("*_").rstrip("*_")
+            markdown_list[markdown_list.index(item)] = f"<b>{extracted}</b>"
+    parsed = " ".join(markdown_list)
+    return parsed
