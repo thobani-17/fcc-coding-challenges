@@ -1,0 +1,17 @@
+Space Week Day 1: Stellar Classification (04-10-2025)
+
+def classification(temp):
+    if temp in range(0, 3700):
+        return f"M"
+    if temp in range(3700, 5200):
+        return f"K"
+    if temp in range(5200, 6000):
+        return f"G"
+    if temp in range(6000, 7500):
+        return f"F"
+    if temp in range(7500, 10000):
+        return f"A"
+    if temp in range(10000, 30000):
+        return f"B"
+    if temp >= 30000:
+        return f"O"
