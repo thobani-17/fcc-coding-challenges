@@ -1,0 +1,10 @@
+Space Week Day 3 - Phone Home (06-10-2025)
+
+def send_message(route):
+    speed = 300000
+    delay = 0.5 * (len(route) - 1)
+    distance = sum(route)
+    time = distance / speed
+    time += delay
+
+    return round(time, 4)
