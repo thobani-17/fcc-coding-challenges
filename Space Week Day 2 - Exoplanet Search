@@ -1,0 +1,19 @@
+Space Week Day 2 - Exoplanet Search (05-10-2025)
+
+def has_exoplanet(readings):
+    import string
+    levels = string.digits + string.ascii_uppercase
+    mapping = {}
+    summation = 0 
+    for x, y in enumerate(levels):
+        mapping.update({y : x})
+    mapping_dict = dict(mapping)
+
+    for char in readings:
+        summation += mapping[char]
+    average = summation / len(readings)
+    percent = average * 0.80
+    any_reading = [mapping[char] for char in readings]
+    
+    return any(num <= percent for num in any_reading)
+
