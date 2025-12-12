@@ -1,0 +1,14 @@
+Base Check (12-08-2025)
+
+def is_valid_number(n, base):
+    import string
+    if base == 2:
+        return all(int(num) == 0 or int(num) == 1 for num in n)
+    if  2 < base <= 8:
+        return all(char in string.octdigits for char in n)
+    if 8 < base <= 10:
+        return all(char in string.digits for char in n)
+    if 10 < base <= 16:
+        return all(char in string.hexdigits for char in n)
+    if 16 < base <= 36:
+        return all(char in string.digits + string.ascii_letters for char in n)
