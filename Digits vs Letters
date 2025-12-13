@@ -1,0 +1,16 @@
+Digits vs Letters (22-09-2025)
+
+def digits_or_letters(s):
+    digits = 0
+    letters = 0
+    for char in list(s):
+        if char.isdigit():
+            digits += 1
+        if char.isalpha():
+            letters += 1
+    if digits > letters:
+        return f"digits"
+    if letters > digits:
+        return f"letters"
+    if letters == digits:
+        return f"tie"
