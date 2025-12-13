@@ -1,0 +1,9 @@
+Jbelmud Text (15-08-2025)
+
+def jbelmu(text):
+    text_list = text.split(" ")
+    jumbled = [word[0] + "".join(sorted(list(word[1:len(word) -1]))) + word[-1] for word in text_list]
+    for word in jumbled:
+        if len(word) == 2 and (word[0] == word[1]):     #This handles one-character words in the string. The word is 2Xed since word[0] = word[-1], e.g. the word 'i' in string "i love jumbled text" becomes 'ii'.
+            jumbled[jumbled.index(word)] = word[0]
+    return " ".join(jumbled)
