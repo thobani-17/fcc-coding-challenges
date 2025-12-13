@@ -1,0 +1,25 @@
+Vowel Balance (11-08-2025)
+
+def is_balanced(s):
+    s = s.replace(" ","").casefold()
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    first_count = 0
+    second_count = 0
+
+    if len(s) % 2 != 0:
+        first_half = s[0 : int(len(s)/2)]
+        second_half = s[int(len(s)/2) + 1 : ]
+    else:
+        first_half = s[0 : int(len(s)/2)]
+        second_half = s[int(len(s)/2) : ]
+        
+    for char in first_half:
+        if char in vowels:
+            first_count += 1
+    for char in second_half:
+        if char in vowels:
+            second_count += 1
+    if first_count == second_count:
+        return True
+    else:
+        return False
