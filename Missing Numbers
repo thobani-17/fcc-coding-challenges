@@ -1,0 +1,13 @@
+Missing Numbers (13-09-2025)
+
+def find_missing_numbers(arr):
+    arr_returned = []
+    arr = list(dict.fromkeys(arr))
+    arr.sort()
+    for i in range(arr[0], arr[-1] + 1):
+        if i not in arr:
+            arr_returned.append(i)
+    if len(range(arr[0], arr[-1] + 1)) == len(arr):
+        return []
+    else:
+        return arr_returned
