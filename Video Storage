@@ -1,0 +1,29 @@
+Video Storage (21-09-2025)
+
+def number_of_videos(video_size, video_unit, drive_size, drive_unit):
+    valid_drive_units = ["TB", "GB"]
+    valid_video_units = ["KB", "MB", "GB"]
+    
+    if drive_unit not in valid_drive_units:
+        return f"Invalid drive unit"
+
+    if video_unit not in valid_video_units:
+        return f"Invalid video unit"
+
+    if video_unit == "B":
+        video_size =video_size / (10**9)
+    
+    if video_unit == "KB":
+        video_size = video_size / (10**6)
+
+    if video_unit == "MB":
+        video_size = video_size / 1000
+
+    if video_unit == "TB":
+        video_size = video_size / 1000
+
+    if drive_unit == "TB":
+        drive_size = drive_size * 1000
+     
+    total_videos = int(drive_size / video_size)
+    return total_videos
