@@ -1,0 +1,32 @@
+Spam Detector (27-09-2025)
+
+def is_spam(number):
+    same_digit = number
+    same_digit = same_digit.replace(" ", "")
+    same_digit = same_digit.replace("-", "")
+    same_digit = same_digit.replace("(", "")
+    same_digit = same_digit.replace(")", "")
+
+
+    number = number.replace("-", " ")
+    number = number.split(" ")
+    country = number[0]
+    area = number[1][1:-1]
+    local_3 = number[2]
+    local_4  = number[3]
+    local_3_list = list(local_3)
+    local_3_list_int = [int(num) for num in local_3_list]
+    sum_local_3 = sum(local_3_list_int)
+    if country[1] != "0":
+        return True
+    if len(country) > 3:
+        return True
+    if int(area) not in range(200,901):
+        return True
+    if str(sum_local_3) in local_4:
+        return True
+    for i in range(len(same_digit)):
+        x = same_digit[i] * 4
+        if same_digit[i:i+4] == x:
+            return True
+    return False
