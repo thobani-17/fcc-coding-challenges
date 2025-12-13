@@ -1,0 +1,10 @@
+S P A C E J A M (14-08-2025)
+
+def space_jam(s):
+    s = s.replace(" ", "")
+    strng = ''
+    for char in s:
+        strng += char
+        strng += "  "
+    strng = strng.upper().strip()
+    return strng
