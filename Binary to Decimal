@@ -1,0 +1,5 @@
+Binary to Decimal (01-10-2025)
+
+def to_decimal(binary):
+    binary = '0b' + binary
+    return int(binary, 2)
