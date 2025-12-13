@@ -1,0 +1,20 @@
+Inventory Update (12-12-2025)
+
+def update_inventory(inventory, shipment):
+    if len(inventory) == 0:
+        return shipment
+    updated = []
+    
+    for item in inventory:
+        for value in shipment:
+            if item[1] == value[1]:
+                updated.append([item[0] + value[0], item[1]])
+    for item in updated:
+        for value in inventory:
+            if item[1] == value[1]:
+                inventory[inventory.index(value)] = item
+    flat_inventory = [num for elem in inventory for num in elem]
+    for item in shipment:
+        if item[1] not in flat_inventory:
+            inventory.append(item)
+    return inventory
