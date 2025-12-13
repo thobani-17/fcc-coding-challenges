@@ -1,0 +1,14 @@
+RBG to Hex(02-09-2025)
+
+def rgb_to_hex(rgb):
+    as_hex ="#"
+    rgb = rgb[4:-1].replace(","," ").split()
+    rgb = [int(num) for num in rgb]
+    for num in rgb:
+        to_hex = hex(num)
+        if len(to_hex) == 3:
+            as_hex += to_hex.replace("0x", "0")
+        else:
+            as_hex += to_hex[2:]
+
+    return as_hex
