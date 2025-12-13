@@ -1,0 +1,7 @@
+Matrix Rotate (06-09-2025)
+
+def rotate(matrix):
+    matrix = [[row[i] for row in matrix] for i in range(len(matrix[0]))]
+    for element in matrix:
+        element.reverse()
+    return matrix
