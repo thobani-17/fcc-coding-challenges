@@ -1,0 +1,7 @@
+CVS Header Parser (28-09-2025)
+
+def get_headings(csv):
+    csv = csv.split(",")
+    csv = [item.strip() for item in csv]
+
+    return csv
