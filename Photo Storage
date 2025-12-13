@@ -1,0 +1,7 @@
+Photo Storage (19-09-2025)
+
+def number_of_photos(photo_size_mb, drive_size_gb):
+    drive_size_mb = drive_size_gb * 1000
+    total_photos = int(drive_size_mb / photo_size_mb)
+
+    return total_photos
