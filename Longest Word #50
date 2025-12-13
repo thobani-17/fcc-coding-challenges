@@ -1,0 +1,10 @@
+Longest Word (29-09-2025)
+
+def get_longest_word(sentence):
+    sentence = sentence.replace(".", "")
+    wordlist = sentence.split(" ")
+    wordlist_length = [len(word) for word in wordlist]
+    wordlist_length.sort()
+    for word in wordlist:
+        if len(word) == wordlist_length[-1]:
+            return word
