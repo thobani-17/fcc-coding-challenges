@@ -1,0 +1,9 @@
+Phone Number Formatter (30-09-2025)
+
+def format_number(number):
+    country = number[0]
+    area = number[1:4]
+    local_1 = number[4:7]
+    local_2 = number[7:]
+
+    return f"+{country} ({area}) {local_1}-{local_2}"
