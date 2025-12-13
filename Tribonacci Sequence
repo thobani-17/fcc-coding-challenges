@@ -1,0 +1,17 @@
+Tribonacci Sequence (01-09-2025)
+
+def tribonacci_sequence(start_sequence, length):
+    be_returned = start_sequence
+    if length == 0:
+        return []
+    if length == 3:
+        return be_returned
+    if length == 2:
+        return be_returned[0:length]
+    if length == 1:
+        return be_returned[:1]
+    for i in range(0,length):
+        x = sum(start_sequence[i:i+3])
+        be_returned.append(x)
+        if len(be_returned) == length:
+            break
