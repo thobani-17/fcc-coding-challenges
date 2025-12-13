@@ -1,0 +1,13 @@
+Vowel Repeater (04-09-2025)
+
+def repeat_vowels(s):
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    c = 0
+    s_array = [list(word) for word in s.split(" ")]
+    for word in s_array:
+        for i, char in enumerate(word):
+            if char in vowels:
+                word[i] = char + (char * c).lower()
+                c += 1
+    repeater = " ".join(["".join(word) for word in s_array])
+    return repeater
