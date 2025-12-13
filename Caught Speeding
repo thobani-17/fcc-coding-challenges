@@ -1,0 +1,12 @@
+Caught Speeding (26-09-2025)
+
+def speeding(speeds, limit):
+    answer = []
+    above_limit = [speed for speed in speeds if speed > limit]
+    if len(above_limit) == 0:
+        return [0, 0]
+    answer.append(len(above_limit))
+    beyond_speed = [speed - limit for speed in above_limit]
+    average = sum(beyond_speed) / len(above_limit)
+    answer.append(average)
+    return answer
