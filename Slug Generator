@@ -1,0 +1,13 @@
+Slug Generator (17-09-2025)
+
+def generate_slug(str):
+    reject = ["^", "!", "?", "#", "%", "*", "-", "[", "]"]
+    strings = str.lower()
+    strings = strings.strip()
+    strings = " ".join(strings.split())
+    for char in reject:
+        if char in strings:
+            strings = strings.replace(char, "")
+    strings = strings.replace(" ", "%20")
+    
+    return strings
