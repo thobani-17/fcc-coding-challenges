@@ -1,0 +1,14 @@
+Word Frequency (14-09-2025)
+
+from collections import *
+def get_words(paragraph):
+    arr = []
+    pg1 = paragraph.replace(".", "")
+    pg2 = pg1.replace(",", "")
+    pg3 = pg2.replace("!", "")
+    paragraph_list = pg3.split()
+    paragraph_list = [word.lower() for word in paragraph_list]
+    list_most = Counter(paragraph_list).most_common(3)
+    for a,b in list_most:
+        arr.append(a)
+    return arr
