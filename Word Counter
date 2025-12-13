@@ -1,0 +1,4 @@
+Word Counter (03-11-2025)
+
+def count_words(sentence):
+    return len(sentence.split(" "))
