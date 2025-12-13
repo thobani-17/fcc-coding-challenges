@@ -1,0 +1,11 @@
+Screen Time (12-09-2025)
+
+def too_much_screen_time(hours):
+    if any(i >= 10 for i in hours):
+        return True
+    for i in range(1, 8):
+        if sum(hours[i:i+3]) / 3 >= 8:
+            return True
+    if sum(hours) / 7 >= 6:
+        return True
+    return False
