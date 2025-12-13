@@ -1,0 +1,13 @@
+Acronym Builder (08-09-2025)
+
+def build_acronym(s):
+    acronym = []
+    s = s.split(" ")
+    ignored = ["a", "for", "an", "and", "by", "of"]
+    for word in ignored:
+        if word in s:
+            s.remove(word)
+    for word in s:
+        acronym.append(word[0].upper())
+
+    return "".join(acronym)
