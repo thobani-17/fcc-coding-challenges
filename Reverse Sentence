@@ -1,0 +1,6 @@
+Reverse Sentence (11-09-2025)
+
+def reverse_sentence(sentence):
+    sentence = sentence.split()
+    sentence = sentence[::-1]
+    return " ".join(sentence)
