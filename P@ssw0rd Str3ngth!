@@ -1,0 +1,21 @@
+P@ssw0rd Str3ngth! (03-10-2025)
+
+def check_strength(password):
+    special_characters = ['!', '@', '#', '$', '%', '^', '&', '*']
+    if len(password) < 8:
+        return f"weak"
+
+    if password.isdigit() == True:
+        return f"weak"
+
+    if password.isalpha()== True:
+        return f"weak"
+
+    if (any(char.isalpha() for char in password) == True) and (any(char for char in special_characters) == True) and (any(char.isdigit() for char in password) == False):
+        return f"medium"
+
+    if (password.isalnum() == True) and any(char.isdigit() for char in password) == True:
+        return f"medium"
+
+    if (any(char.isupper() for char in password) == True) and (any(char for char in special_characters) == True) and (any(char.islower() for char in password) == True):
+        return f"strong"
