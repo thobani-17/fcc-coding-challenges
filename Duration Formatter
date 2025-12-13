@@ -1,0 +1,22 @@
+Duration Formatter (26-10-2025)
+
+def format(seconds):
+    hours = 0
+    minutes = 0
+    if seconds < 3600:
+        while seconds > 60:
+            seconds -= 60
+            minutes += 1
+        if seconds < 10:
+            seconds = f"0{seconds}"
+        return f"{minutes}:{seconds}"
+    while seconds > 3600:
+        seconds -= 3600
+        hours += 1
+    while seconds > 60:
+        seconds -= 60
+        minutes += 1
+    if minutes < 10:
+        minutes = f"0{minutes}"
+
+    return f"{hours}:{minutes}:{seconds}"
