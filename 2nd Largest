@@ -1,0 +1,9 @@
+2nd Largest (25-09-2025)
+
+def second_largest(arr):
+    arr.sort()
+    arr.reverse()
+    for i in range(0, len(arr)):
+        if arr[i] != arr[0]:
+            return arr[i]
+            break
