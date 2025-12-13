@@ -1,0 +1,9 @@
+Thermostat Adjuster (15-09-2025)
+
+def adjust_thermostat(temp, target):
+    if temp < target:
+        return f"heat"
+    if temp > target:
+        return f"cool"
+    if temp == target:
+        return f"hold"
