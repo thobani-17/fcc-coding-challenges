@@ -1,0 +1,11 @@
+Image Search (04-11-2025)
+
+def image_search(images, term):
+    term = term.lower()
+    term1 = term.capitalize()
+    to_be_returned = []
+    for searches in images:
+        if (term1 in searches) or (term in searches):
+            to_be_returned.append(searches)
+
+    return to_be_returned
