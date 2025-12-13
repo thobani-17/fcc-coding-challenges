@@ -1,0 +1,16 @@
+Fingerprint Test (17-11-2025)
+
+def is_match(fingerprint_a, fingerprint_b):
+    len_a = len(fingerprint_a)
+    len_b = len(fingerprint_b)
+    difference = ''
+    if len_a != len_b:
+        return False
+
+    for i in range(len_a):
+        if fingerprint_a[i] != fingerprint_b[i]:
+            difference += fingerprint_b[i]
+    if len(difference) > len_a * 0.10:
+        return False
+    else:
+        return True
