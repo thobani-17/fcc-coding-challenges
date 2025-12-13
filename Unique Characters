@@ -1,0 +1,11 @@
+Unique Characters (09-09-2025)
+
+def all_unique(s):
+    str_list = []
+    for i in range(len(s)):
+        str_list.append(s[i])
+    str_list = list(dict.fromkeys(str_list))
+    if len(s) == len(str_list):
+        return True
+    else:
+        return False
