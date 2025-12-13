@@ -1,0 +1,11 @@
+File Storage (20-09-2025)
+
+def number_of_files(file_size, file_unit, drive_size_gb):
+    drive_size_mb =  drive_size_gb * 1000
+    if file_unit == "B":
+        file_size = file_size / (10**6)
+    if file_unit == "KB":
+        file_size = file_size / 1000
+    total_files = int(drive_size_mb / file_size)
+
+    return total_files
