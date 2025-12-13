@@ -1,0 +1,8 @@
+Targeted Sum (17-08-2025)
+
+def find_target(arr, target):
+    for x in arr:
+        for y in arr:
+            if (x + y == target) and (arr.index(x) != arr.index(y)):
+                return sorted([arr.index(x), arr.index(y)])
+    return f"Target not found"
