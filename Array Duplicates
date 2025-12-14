@@ -1,0 +1,5 @@
+Array Duplicates (30-08-2025)
+
+
+def find_duplicates(arr):
+    return sorted(list(set([item for item in arr if arr.count(item) > 1])))
