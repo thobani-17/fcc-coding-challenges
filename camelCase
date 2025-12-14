@@ -1,0 +1,11 @@
+camelCase (28-08-2025)
+
+  def to_camel_case(s):
+    s = s.replace("_"," ")
+    s = s.replace("-"," ")
+    s_list = s.split(" ")
+    s_list[0] = s_list[0].lower()
+    for i in range(1, len(s_list)):
+        s_list[i] = s_list[i].title()
+
+    return "".join(s_list)
