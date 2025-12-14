@@ -1,0 +1,12 @@
+Second Best (28-08-2025)
+
+def get_laptop_cost(laptops, budget):
+    affordable = sorted([num for num in laptops if num <= budget])
+    laptops = sorted(list(set(laptops)))
+    
+    if affordable == []:
+        return 0
+    if laptops[-2] <= budget:
+        return laptops[-2]
+    else:
+        return affordable[-1]
