@@ -1,0 +1,12 @@
+Pangram (03-09-2025)
+
+def is_pangram(sentence, letters):
+    
+    letters = "".join(sorted(list(letters.lower())))
+    sentence = sentence.strip("!,.'?").lower()
+    sentence = sentence.replace(" ","")
+    unique = "".join(sorted(list(set(list(sentence)))))
+    if letters == unique:
+        return True
+    else:
+        return False
