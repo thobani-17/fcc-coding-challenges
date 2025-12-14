@@ -1,0 +1,5 @@
+Capitalize It (14-12-2025)
+
+def title_case(title):
+    title = title.casefold().title()
+    return title
