@@ -1,0 +1,27 @@
+Character Battle (24-08-2025)
+
+def battle(my_army, opposing_army):
+    import string
+    dicti = {'1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '@': 0, '.': 0, '$': 0, ' ':0}
+    for i, char in enumerate("0" + string.ascii_lowercase + string.ascii_uppercase):
+        dicti.update({char:i})
+    count_my = 0
+    count_opp = 0
+    if len(my_army) > len(opposing_army):
+        return f"Opponent retreated"
+    if len(my_army) < len(opposing_army):
+        return f"We retreated"
+    for i in range(len(my_army)):
+        if dicti[my_army[i]] > dicti[opposing_army[i]]:
+            count_my += 1
+        if dicti[my_army[i]] < dicti[opposing_army[i]]:
+            count_opp += 1
+        if dicti[my_army[i]] == dicti[opposing_army[i]]:
+            count_my += 1
+            count_opp += 1
+    if count_my > count_opp:
+        return f"We won"
+    if count_my < count_opp:
+        return f"We lost"
+    if count_my == count_opp:
+        return f"It was a tie"
