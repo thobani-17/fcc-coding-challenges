@@ -1,0 +1,12 @@
+Consonant Count (16-12-2025)
+
+def has_consonant_count(text, target):
+
+    vowels = ['a', 'e','i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    count = 0
+    for char in text:
+        if char.isalpha() and (char not in vowels):
+            count += 1
+    if count == target:
+        return True
+    return False
