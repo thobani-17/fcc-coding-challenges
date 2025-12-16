@@ -1,0 +1,10 @@
+Speech Check (15-12-2025)
+
+def speed_check(speed_mph, speed_limit_kph):
+    speed_kph = speed_mph * 1.60934
+    check = speed_limit_kph - speed_kph
+    if check >= 0:
+        return f"Not Speeding"
+    if -5 <= check < 0:
+        return f"Warning"
+    return f"Ticket"
