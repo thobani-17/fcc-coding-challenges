@@ -1,0 +1,21 @@
+Unorder of Operations (27-08-2025)
+
+def evaluate(numbers, operators):
+
+    count = numbers[0]
+    for i in range(len(numbers)):
+        if i == len(numbers) - 1:
+            break
+            
+        if operators[i % len(operators)] == '*':
+            count *= numbers[i+1]
+        if operators[i % len(operators)] == '-':
+            count -= numbers[i+1]
+        if operators[i % len(operators)] == '+':
+            count += numbers[i+1]
+        if operators[i % len(operators)] == '%':
+            count %= numbers[i+1]
+        if operators[i % len(operators)] == '/':
+            count /= numbers[i+1]
+                
+    return count
