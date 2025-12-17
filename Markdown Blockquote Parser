@@ -1,0 +1,9 @@
+Markdown Blockquote Parser (17-12-2025)
+
+def parse_blockquote(markdown):
+
+    markdown = markdown.strip().split(" ")
+    markdown.pop(0)
+    parsed = " ".join(markdown).strip()
+    blockquote = f"<blockquote>{parsed}</blockquote>"
+    return blockquote
