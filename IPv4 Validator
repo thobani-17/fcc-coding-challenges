@@ -1,0 +1,9 @@
+IPv4 Validator (05-09-2025)
+
+def is_valid_ipv4(ipv4):
+    import ipaddress
+    try:
+        ipaddress.IPv4Address(ipv4)
+        return True
+    except ipaddress.AddressValueError:
+        return False
