@@ -1,0 +1,10 @@
+Pairwise (19-12-2025)
+
+def pairwise(arr, target):
+    count = 0
+    for i, char in enumerate(arr):
+        for j, num in enumerate(arr):
+            if char + num == target and (i != j):
+                count += i + j
+    index_sum = count / 2
+    return index_sum
