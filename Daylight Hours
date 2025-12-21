@@ -1,0 +1,51 @@
+Daylight Hours (21-12-2025)
+
+def daylight_hours(latitude):
+    if latitude in range(83, 91):
+        return 0
+    if latitude in range(75, 83):
+        return 2
+    if latitude in range(68, 75):
+        return 2
+    if latitude in range(60, 68):
+        return 6
+    if latitude in range(53, 60):
+        return 6
+    if latitude in range(45, 53):
+        return 9
+    if latitude in range(38, 45):
+        return 9
+    if latitude in range(30, 38):
+        return 10
+    if latitude in range(23, 30):
+        return 10
+    if latitude in range(15, 23):
+        return 11
+    if latitude in range(8, 15):
+        return 11
+    if latitude in range(0, 8):
+        return 12
+    if latitude in range(-8, 0):
+        return 12
+    if latitude in range(-15, -8):
+        return 12
+    if latitude in range(-23, -15):
+        return 12
+    if latitude in range(-30, -23):
+        return 13
+    if latitude in range(-38, -30):
+        return 13
+    if latitude in range(-45, -38):
+        return 15
+    if latitude in range(-53, -45):
+        return 15
+    if latitude in range(-60, -53):
+        return 21
+    if latitude in range(-68, -60):
+        return 21
+    if latitude in range(-75, -68):
+        return 23
+    if latitude in range(-83, -75):
+        return 23
+    if latitude in range(-90, -83):
+        return 24
