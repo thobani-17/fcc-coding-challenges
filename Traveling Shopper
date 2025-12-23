@@ -1,0 +1,14 @@
+Traveling Shopper (22-12-2025)
+
+def buy_items(funds, items):
+    rates = {"USD":1.00, "EUR":1.10, "GBP":1.25, "JPY":0.0070, "CAD":0.75}
+    count = 0
+    total = float(funds[0]) * rates[funds[1]]
+    for item in items:
+        amount = float(item[0]) * rates[item[1]]
+        total -= amount
+        if total > 0:
+            count += 1
+    if count == len(items):
+        return f"Buy them all!"
+    return f"Buy the first {count} items."
