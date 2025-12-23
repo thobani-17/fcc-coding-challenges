@@ -1,0 +1,10 @@
+Re: Fwd: Fw: Count (23-12-2025)
+
+def email_chain_count(subject):
+
+    interact = ["re:", "fw:", "fwd:"]
+    subject = subject.casefold()
+    total = 0
+    for value in interact:
+        total += subject.count(value)
+    return total
