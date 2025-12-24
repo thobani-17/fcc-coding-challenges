@@ -1,0 +1,8 @@
+Markdown Image Parser (24-12-2025)
+
+def parse_image(markdown):
+    markdown = markdown.split("(")
+    alt = markdown[0][2:-1]
+    src = markdown[1][:-1]
+    img_tag = f"<img src=\"{src}\" alt=\"{alt}\">"
+    return img_tag
