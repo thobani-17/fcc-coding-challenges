@@ -1,0 +1,11 @@
+Takeoff Fuel (29-12-2025)
+
+def fuel_to_add(current_gallons, required_liters):
+    
+    required_gallons = required_liters / 3.78541
+    if current_gallons == 0:
+        return required_liters
+    if round(required_gallons) <= current_gallons:
+        return 0
+    additional_gallons = required_gallons - current_gallons
+    return round(additional_gallons)
