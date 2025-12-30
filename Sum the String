@@ -1,0 +1,11 @@
+Sum the String (30-12-2025)
+
+def string_sum(s):
+    import string
+    for char in s:
+        if char not in string.digits:
+            s = s.replace(char, ",")
+    s = s.split(",")
+    digits_list = [char for char in s if char.isdigit()]
+    sum_digits = sum([int(num) for num in digits_list])
+    return sum_digits
