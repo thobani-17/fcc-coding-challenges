@@ -1,0 +1,14 @@
+Tire Pressure (05-01-2026)
+
+def tire_status(pressures_psi, range_bar):
+    range_psi = [num * 14.5038 for num in range_bar]
+
+    for i, num in enumerate(pressures_psi):
+        if range_psi[0] <= num <= range_psi[1]:
+            pressures_psi[i] = "Good"
+        if num < range_psi[0]:
+            pressures_psi[i] = "Low"
+        if num > range_psi[1]:
+            pressures_psi[i] = "High" 
+            
+    return pressures_psi
