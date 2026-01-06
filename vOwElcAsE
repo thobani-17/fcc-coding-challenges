@@ -1,0 +1,9 @@
+vOwElcAsE (06-01-2026)
+
+def vowel_case(s):
+    vowels = ["a", "e", "i", "o", "u"]
+    lst = list(s.lower())
+    for i, char in enumerate(lst):
+        if char.isalpha() and char in vowels:
+            lst[i] = char.upper()
+    return "".join(lst)
