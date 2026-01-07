@@ -1,0 +1,10 @@
+Markdown Unordered List Parser (07-01-2026)
+
+def parse_unordered_list(markdown):
+    markdown = markdown.split("\n")
+    items_list = [item.strip("-").strip() for item in markdown]
+    unordered_array = [f"<li>{item}</li>" for item in items_list]
+    unordered_string = "".join(unordered_array)
+    unordered_list = f"<ul>{unordered_string}</ul>"
+
+    return unordered_list
