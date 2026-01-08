@@ -1,0 +1,10 @@
+Sorted Array? (08-01-2026)
+
+def is_sorted(arr):
+    ascending = list(sorted(arr))
+    descending = list(reversed(sorted(arr)))
+    if arr == ascending:
+        return f"Ascending"
+    if arr == descending:
+        return f"Descending"
+    return f"Not sorted"
