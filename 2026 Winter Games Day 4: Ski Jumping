@@ -1,0 +1,11 @@
+2026 Winter Games Day 4: Ski Jumping (09-02-2026)
+
+def ski_jump_medal(distance_points, style_points, wind_comp, k_point_bonus):
+    score = distance_points + style_points + wind_comp + k_point_bonus
+    if score >= 180.0:
+        return f"Gold"
+    if 175.0 <= score < 180.0:
+        return f"Silver"
+    if 172.0 <= score < 175.0:
+        return f"Bronze"
+    return f"No Medal"
