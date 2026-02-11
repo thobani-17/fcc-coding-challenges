@@ -1,0 +1,18 @@
+2026 Winter Games Day 5: Cross-Country Skiing (10-02-2026)
+
+def get_relative_results(results):
+    from datetime import datetime, timedelta
+    time_behind = ["0"]
+    winner = results[0]
+    time1 = datetime.strptime(winner, "%H:%M:%S")
+    for item in results[1:]:
+        time2 = datetime.strptime(item, "%H:%M:%S")
+        if time1 >= time2:
+             diff = time1 - time2
+        else:
+            diff = time2 - time1
+        if str(diff)[2] == "0":
+            time_behind.append("+" + str(diff)[3:])
+        else:
+             time_behind.append("+" + str(diff)[2:])
+    return time_behind
