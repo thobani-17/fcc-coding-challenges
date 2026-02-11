@@ -1,0 +1,8 @@
+2026 Winter Games Day 3: Biathlon (08-02-2026)
+
+def calculate_penalty_distance(rounds):
+    counter = 0
+    for num in rounds:
+        multiplier = 5 - num
+        counter += 150 * multiplier
+    return counter
