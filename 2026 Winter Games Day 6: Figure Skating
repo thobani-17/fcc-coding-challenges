@@ -1,0 +1,10 @@
+2026 Winter Games Day 6: Figure Skating (11-02-2026)
+
+def compute_score(judge_scores, *penalties):
+    judge_scores.sort()
+    judge_scores.pop(0)
+    judge_scores.pop()
+    sum_scores = sum(judge_scores)
+    sum_pen = sum(penalties)
+    total = sum_scores - sum_pen
+    return total
