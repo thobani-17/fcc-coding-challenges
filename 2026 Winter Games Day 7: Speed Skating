@@ -1,0 +1,7 @@
+2026 Winter Games Day 7: Speed Skating (12-02-2026)
+
+def largest_difference(skater1, skater2):
+    difference = []
+    for i in range(len(skater1)):
+        difference.append(abs(skater1[i] - skater2[i]))
+    return difference.index(max(difference)) + 1
