@@ -1,0 +1,12 @@
+2026 Winter Games Day 10: Alpine Skiing (15-02-2026)
+
+def get_hill_rating(drop, distance, hill_type):
+    adjust = {"Downhill": 1.2, "Slalom": 0.9, "Giant Slalom": 1.0}
+    steepness = drop / distance
+    steepness *= adjust[hill_type]
+    if steepness <= 0.1:
+        return f"Green"
+    if 0.1 < steepness <= 0.25:
+        return f"Blue"
+    if steepness > 0.25:
+        return f"Black"
