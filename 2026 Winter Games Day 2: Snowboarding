@@ -1,0 +1,13 @@
+2026 Winter Games Day 2: Snowboarding (07-02-2026)
+
+def get_landing_stance(start_stance, rotation):
+    if abs(rotation) == 90:
+        return start_stance
+    flips = rotation / 180
+    if flips % 2 == 0:
+        return start_stance
+    if start_stance == "Regular" and flips % 2 != 0:
+        return f"Goofy"
+    if start_stance == "Goofy" and flips % 2 != 0:
+        return f"Regular"
+
