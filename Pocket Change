@@ -1,0 +1,5 @@
+Pocket Change (05-02-2026)
+def count_change(change):
+    cents_total = sum(change)
+    dollars = cents_total / 100
+    return f"${dollars:.2f}"
