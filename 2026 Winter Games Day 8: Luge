@@ -1,0 +1,8 @@
+2026 Winter Games Day 8: Luge (13-02-2026)
+
+def get_fastest_speed(times):
+    speed = []
+    for i in range(len(times)):
+        segment = [320, 280, 350, 300, 250]
+        speed.append(segment[i] / times[i])
+    return f"The luger's fastest speed was {max(speed):.2f} m/s on segment {speed.index(max(speed)) + 1}."
