@@ -1,0 +1,19 @@
+2026 Winter Games Day 9: Skeleton (14-02-2026)
+
+def get_difficulty(track):
+    total_score = 0
+    for i in range(len(track) - 1):
+        if track[i] == "S":
+            total_score += 0
+        if track[i] == "R" and track[i+1] != "L":
+            total_score += 5
+        if track[i] == "L" and track[i+1] != "R":
+            total_score += 5
+        if (track[i] == "R" and track[i+1] == "L") or (track[i] == "L" and track[i+1] == "R"):
+            total_score += 15
+    if 0 <= total_score <= 100:
+        return f"Easy"
+    if 101 <= total_score <= 200:
+        return f"Medium"
+    if total_score > 200:
+        return f"Hard"
