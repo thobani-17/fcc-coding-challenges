@@ -1,0 +1,10 @@
+Groundhog Day (02-02-2026)
+
+def groundhog_day_prediction(appearance):
+    if appearance == True:
+        return f"Looks like we'll have six more weeks of winter."
+    if appearance == False:
+        return f"It's going to be an early spring."
+
+    return f"No prediction this year."
+
