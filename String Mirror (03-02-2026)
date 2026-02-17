@@ -1,0 +1,4 @@
+String Mirror (03-02-2026)
+
+def mirror(s):
+    return s + s[::-1]
