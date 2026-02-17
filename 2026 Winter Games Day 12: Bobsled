@@ -1,0 +1,23 @@
+2026 Winter Games Day 12: Bobsled (17-02-2026)
+
+def check_eligibility(athlete_weights, sled_weight):
+    
+    if len(athlete_weights) == 1 and sled_weight < 162:
+        return f"Not Eligible"
+    if len(athlete_weights) == 2 and sled_weight < 170:
+        return f"Not Eligible"
+    if len(athlete_weights) == 4 and sled_weight < 210:
+        return f"Not Eligible"
+
+    if len(athlete_weights) == 1 and  (athlete_weights[0] + sled_weight > 247):
+        return f"Not Eligible"
+    if len(athlete_weights) == 1 and  (athlete_weights[0] + sled_weight <= 247):
+        return f"Eligible"
+    if len(athlete_weights) == 2 and (sum(athlete_weights) + sled_weight <= 390):
+        return f"Eligible"
+    if len(athlete_weights) == 2 and (sum(athlete_weights) + sled_weight > 390):
+        return f"Not Eligible"
+    if len(athlete_weights) == 4 and (sum(athlete_weights) + sled_weight <= 630):
+        return f"Eligible"
+    if len(athlete_weights) == 4 and (sum(athlete_weights) + sled_weight > 630):
+        return f"Not Eligible"
