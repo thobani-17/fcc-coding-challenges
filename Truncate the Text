@@ -1,0 +1,7 @@
+Truncate the Text (04-02-2026)
+
+def truncate_text(text):
+    if len(text) <= 20:
+        return text
+        
+    return text[:17] + "..."
