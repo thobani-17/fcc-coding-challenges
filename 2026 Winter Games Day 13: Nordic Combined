@@ -1,0 +1,7 @@
+2026 Winter Games Day 13: Nordic Combined (18-02-2026)
+
+def calculate_start_delays(jump_scores):
+    import math
+    best = max(jump_scores)
+    delay = [math.ceil((best - num) * 1.5) for num in jump_scores]
+    return delay
