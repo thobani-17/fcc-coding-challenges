@@ -1,0 +1,14 @@
+Letter and Number Count (26-02-2026)
+
+def count_letters_and_numbers(s):
+    letter = 0
+    number = 0
+
+    for char in s:
+        if char.isalpha():
+            letter += 1
+        if char.isdigit():
+            number += 1
+    if letter == 1 and number == 1:
+        return f"The string has {letter} letter and {number} number."
+    return f"The string has {letter} letters and {number} numbers."
