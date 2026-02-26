@@ -1,0 +1,26 @@
+Blood Type Compatibility (23-02-2026)
+
+def can_donate(donor, recipient):
+    if donor == recipient:
+        return True
+    if donor == "O-":
+        return True
+    if (donor == "O+") and ("+" not in recipient):
+        return False
+    if donor == "A+" and ("+" not in recipient):
+        return False
+    if donor == "B+" and ("+" not in recipient):
+        return False
+    
+    if donor == "B-" and  (("B" in recipient) or ("AB" in recipient)):
+        return True
+    if donor == "A-" and  (("A" in recipient) or ("AB" in recipient)):
+        return True
+    if donor[0] == "A" and recipient[0] == "B":
+        return False
+    if donor[0] == "B" and recipient[0] == "A":
+        return False
+        
+    if ("+" in donor) and ("-" in recipient):
+        return False
+    return True
