@@ -1,0 +1,12 @@
+Credit Card Masker (17-10-2026)
+
+def mask(card):
+    asterisk = ["****"] * 3
+
+    separator = card[4]
+
+    number_list = card.split(separator)
+
+    asterisk.append(number_list[-1])
+
+    return separator.join(asterisk)
