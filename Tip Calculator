@@ -1,0 +1,16 @@
+Tip Calculator (20-10-2026)
+
+def calculate_tips(meal_price, custom_tip):
+    tips = []
+
+    price = float(meal_price[1:])
+
+    custom_tip = float(custom_tip[:len(custom_tip) -1]
+    ) / 100
+
+    tip_values = [0.15, 0.20]
+    tip_values.append(custom_tip)
+
+    for num in tip_values:
+        tips.append(f"${price * num:.2f}")
+    return tips
