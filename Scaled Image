@@ -1,0 +1,14 @@
+Scaled Image (25-01-2026)
+
+def scale_image(size, scale):
+    result = ""
+
+    dimensions = size.split("x")
+    width = int(dimensions[0])
+    height = int(dimensions[1])
+    scaled_width = int(width * scale)
+    scaled_height = int(height * scale)
+
+    result += str(scaled_width) + "x" + str(scaled_height)
+
+    return result
