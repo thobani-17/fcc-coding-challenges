@@ -1,0 +1,14 @@
+Odd or Even Day (27-01-2026)
+
+def odd_or_even_day(timestamp):
+    from datetime import datetime, timezone
+
+    date_time = datetime.fromtimestamp(timestamp / 1000, timezone.utc)  #convert timestamp from milliseconds to seconds
+    date = date_time.date()
+    date = str(date)
+    day = int(date[-2:])
+
+    if day % 2 == 0:
+        return "even"
+    else:
+        return "odd"
